@@ -7,8 +7,11 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="140021c2-7d03-4e2a-87cd-c1869d3cc049" >
 		<http:listener-connection host="0.0.0.0" port="8081" />
 	</http:listener-config>
-	<flow name="project20Flow" doc:id="32bfcf3f-2913-4086-a05b-5f458e4d92e3" >
-		<http:listener doc:name="Listener" doc:id="25816212-2761-458b-9aa8-d2a0d0dea168" config-ref="HTTP_Listener_config" path="/fetch"/>
-		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="608c102c-90c3-4f40-97b2-c135b72bfb4f" />
+	<http:listener-config name="HTTP_Listener_config1" doc:name="HTTP Listener config" doc:id="f98ab523-876b-4390-9bf5-e292ff123b0b" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="project20Flow" doc:id="eeb289b6-f2f1-4756-90cf-23428e221985" >
+		<http:listener doc:name="Listener" doc:id="309ea431-01f3-4716-b85d-f9c58d99633b" config-ref="HTTP_Listener_config1" path="/path"/>
+		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="2375091a-d1a5-45c6-9a3f-2e28e2690104" />
 	</flow>
 </mule>
