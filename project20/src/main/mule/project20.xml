@@ -13,5 +13,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<flow name="project20Flow" doc:id="eeb289b6-f2f1-4756-90cf-23428e221985" >
 		<http:listener doc:name="Listener" doc:id="309ea431-01f3-4716-b85d-f9c58d99633b" config-ref="HTTP_Listener_config1" path="/path"/>
 		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="2375091a-d1a5-45c6-9a3f-2e28e2690104" />
+		<logger level="INFO" doc:name="Logger" doc:id="479fd29d-61d8-49fa-a936-94a0726ffa33" message="third logger added"/>
 	</flow>
 </mule>
